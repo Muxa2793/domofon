@@ -17,7 +17,7 @@ def get_video():
     id = 0
 
     # names related to ids: example ==> Mikhail: id=1,  etc
-    names = ['None', 'Mikhail']
+    names = ['None', 'Mikhail', 'Adelina']
 
     cap = cv2.VideoCapture(video_url)
     cap.set(3, 640)  # set Width
@@ -41,7 +41,6 @@ def get_video():
             if (confidence < 100):
                 id = names[id]
                 confidence = "  {0}%".format(round(100 - confidence))
-                open_door()
             elif (40 < confidence < 100):
                 id = names[id]
                 confidence = "  {0}%".format(round(100 - confidence))
